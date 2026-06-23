@@ -1,73 +1,50 @@
+.hero{
+min-height:70vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:60px 24px 40px;
+}
+
 .hero-logo{
-width:min(260px,70vw);
-animation:float 4s ease-in-out infinite;
-}
-
-@keyframes float{
-
-0%{
-transform:translateY(0);
-}
-
-50%{
-transform:translateY(-10px);
-}
-
-100%{
-transform:translateY(0);
-}
-
+width:min(180px,45vw);
+margin-bottom:32px;
+animation:none;
 }
 
 .hero h1{
-font-size:clamp(2.2rem,6vw,4rem);
-font-weight:900;
-margin-top:20px;
+font-size:clamp(2.4rem,8vw,3.6rem);
+font-weight:800;
+letter-spacing:-2px;
+margin:0;
+line-height:1;
 }
 
 .hero p{
-margin-top:15px;
-max-width:700px;
+margin-top:16px;
+max-width:420px;
+font-size:1.05rem;
 color:var(--color-text-secondary);
-line-height:1.6;
+line-height:1.7;
 }
 
 .hero-buttons{
-margin-top:30px;
-display:flex;
-gap:15px;
-flex-wrap:wrap;
-justify-content:center;
+margin-top:40px;
+width:min(440px,92vw);
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:14px;
 }
 
-.whatsapp{
-position:fixed;
-right:20px;
-bottom:20px;
-width:65px;
-height:65px;
-background:var(--color-success);
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:28px;
-text-decoration:none;
-color:#fff;
-box-shadow:var(--shadow-floating);
-z-index:100;
-}
-
-@media(max-width:600px){
+@media(max-width:640px){
 
 .hero-buttons{
-flex-direction:column;
-width:100%;
-max-width:340px;
-}
 
-.hero-buttons .btn{
-width:100%;
+grid-template-columns:1fr;
+
 }
 
 }
